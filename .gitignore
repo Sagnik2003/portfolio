@@ -1,0 +1,11 @@
+# Local deploy helper (handles your token; never commit it)
+deploy.ps1
+
+# OS / editor clutter
+Thumbs.db
+desktop.ini
+.DS_Store
+.vscode/
+
+# Original, readable photo (only the shuffled tile sheet is published)
+private/

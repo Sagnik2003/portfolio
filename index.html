@@ -1,0 +1,649 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Sagnik Kayal | M.Tech AI Scholar at IIT Bhubaneswar</title>
+  <meta name="description" content="Personal portfolio and academic journey of Sagnik Kayal, M.Tech AI scholar at IIT Bhubaneswar specializing in Computer Vision, Multimodal Learning, and LLMs." />
+  
+  <link href="style.css" rel="stylesheet" type="text/css" />
+  <!-- Apply saved / system theme before first paint (no flash) -->
+  <script>
+    (function () {
+      var t = null;
+      try { t = localStorage.getItem('theme'); } catch (e) {}
+      if (!t) t = window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light';
+      document.documentElement.setAttribute('data-theme', t);
+    })();
+  </script>
+</head>
+
+<body>
+
+  <!-- =================================================================
+       NAVIGATION BAR
+       Tabs: Key Skills, Projects, Positions of Responsibility, Certifications, Others
+       Note: Academic Journey is intentionally a scroll-down section below, NOT a navbar tab.
+       ================================================================= -->
+  <header class="navbar">
+    <div class="container nav-container">
+      <a href="index.html" class="brand-logo" aria-label="Home" title="Home">
+        <span class="brand-icon"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 10.5 12 3l9 7.5"/><path d="M5 9.5V20a1 1 0 0 0 1 1h4v-6h4v6h4a1 1 0 0 0 1-1V9.5"/></svg></span>
+      </a>
+
+      <!-- Navigation Tabs / Buttons linking to separate HTML pages -->
+      <nav>
+        <ul class="nav-links" id="navLinks">
+          <li class="nav-item"><a href="skills.html">Key Skills</a></li>
+          <li class="nav-item"><a href="projects.html">Projects</a></li>
+          <li class="nav-item"><a href="positions.html">Positions of Responsibility</a></li>
+          <li class="nav-item"><a href="certifications.html">Certifications</a></li>
+          <li class="nav-item"><a href="others.html">Others</a></li>
+        </ul>
+      </nav>
+
+      <a href="#contact" class="nav-cta">Let's Talk</a>
+
+      <!-- Light / dark mode toggle -->
+      <button class="theme-toggle" id="themeToggle" type="button" aria-label="Switch to dark mode" title="Toggle dark mode">
+        <svg class="icon-moon" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 12.8A9 9 0 1 1 11.2 3a7 7 0 0 0 9.8 9.8z"/></svg>
+        <svg class="icon-sun" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="4.5"/><path d="M12 2v2M12 20v2M4.9 4.9l1.4 1.4M17.7 17.7l1.4 1.4M2 12h2M20 12h2M4.9 19.1l1.4-1.4M17.7 6.3l1.4-1.4"/></svg>
+      </button>
+
+      <!-- Mobile Hamburger Toggle -->
+      <button class="mobile-toggle" id="mobileToggle" aria-label="Toggle navigation menu">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+    </div>
+  </header>
+
+  <!-- =================================================================
+       HERO SECTION: FULL PAGE COVER EXPERIENCE
+       Covers whole viewport edge-to-edge (no small box, no wasted space).
+       Photo fills canvas on the right; left side features high-contrast
+       typography and the glassmorphed M.Tech IIT Bhubaneswar bar.
+       ================================================================= -->
+  <!-- Hero stays pinned while the Academic Journey slides up over it -->
+  <div class="hero-reveal-wrapper">
+
+  <section class="hero-section hero-full-screen" id="hero">
+    
+    <!-- Sunlit watercolour forest behind everything in the hero -->
+    <div class="hero-art" aria-hidden="true"></div>
+
+    <!-- Full-bleed background photo & seamless natural scrim -->
+    <div class="hero-bg-wrapper">
+      <!-- Photo is stored only as shuffled tiles (images/hero-tiles.webp) and re-assembled here -->
+      <canvas class="hero-bg-photo" id="heroPhoto" role="img" aria-label="Sagnik Kayal - M.Tech scholar at IIT Bhubaneswar"></canvas>
+      <div class="hero-scrim-overlay"></div>
+    </div>
+
+    <div class="container hero-content-container">
+      <div class="hero-text-block">
+        <h2 class="hero-greeting">Hello! I'm</h2>
+        
+        <!-- Exact requested signature code & font -->
+        <aboutText class="fontN">Sagnik Kayal</aboutText></br>
+
+        <!-- Glassmorphed M.Tech IIT Bhubaneswar Bar with official logo -->
+        <div class="hero-affiliation-glass">
+          <img src="images/iitbbs_logo.svg" alt="IIT Bhubaneswar Official Logo" class="iit-logo" />
+          <span>M.Tech student at IIT Bhubaneswar</span>
+        </div>
+
+        <p class="hero-bio-full">
+          Specializing in <strong>Computer Vision</strong>, <strong>Multimodal Learning</strong>, 
+          and <strong>LLM Fine-Tuning</strong>. Pursuing Master of Technology in Artificial Intelligence 
+          at the Indian Institute of Technology, Bhubaneswar.
+        </p>
+
+        <!-- Template Styled [ LET'S TALK ] Button -->
+        <div class="hero-actions">
+          <a href="#contact" class="template-talk-btn">
+            <span>LET'S TALK</span>
+          </a>
+        </div>
+      </div>
+    </div>
+
+    <!-- Light that blooms from the clearing as you scroll ("walk into the light") -->
+    <div class="hero-light" aria-hidden="true"></div>
+
+    <!-- Scroll Down Indicator Linking Directly to Academic Journey -->
+    <div class="hero-scroll-indicator">
+      <a href="#academic" class="scroll-down-btn">
+        <span>Scroll down to Academic Journey</span>
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M12 5v14M19 12l-7 7-7-7"/></svg>
+      </a>
+    </div>
+
+  </section>
+
+  <!-- =================================================================
+       ACADEMIC JOURNEY: SCROLL DOWN VERTICAL TIMELINE
+       Schooling (10th & 12th board) to University, courses taken, grades,
+       exact timelines, and grades.
+       ================================================================= -->
+  <section id="academic" class="wc-bg academic-overlap">
+
+    <div class="container">
+      <div class="section-header">
+        <span class="section-tag">Chronological Progression</span>
+        <h2 class="section-title">Academic Journey</h2>
+        <p class="section-desc">
+          From foundational schooling and board examinations to undergraduate computer science and advanced artificial intelligence research at IIT Bhubaneswar.
+        </p>
+      </div>
+
+      <div class="timeline-wrapper">
+        <div class="timeline-line timeline-track"></div>
+        <div class="timeline-line timeline-progress"></div>
+
+        <!-- Milestone 1: M.Tech in AI at IIT Bhubaneswar -->
+        <div class="timeline-item">
+          <div class="timeline-dot"></div>
+          <div class="card timeline-card">
+            <div class="timeline-header">
+              <div class="institution-block">
+                <h3 class="institution-name">Indian Institute of Technology, Bhubaneswar</h3>
+                <p class="degree-name">Master of Technology (M.Tech) in Artificial Intelligence</p>
+                <div class="institution-meta">
+                  <span class="timeline-period">
+                    <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
+                    July 2025 – Present &bull; Expected June 2027
+                  </span>
+                  <span style="font-size: 0.82rem; color: var(--text-muted);">&bull; Bhubaneswar, Odisha, India</span>
+                </div>
+              </div>
+              <div class="grade-badge">
+                <span>Current CGPA: 7.88 / 10.0</span>
+              </div>
+            </div>
+
+            <p class="timeline-content-desc">
+              Advanced graduate program focusing on core mathematical foundations of machine learning, modern deep learning architectures, computer vision, and multimodal foundation models. Actively serving as Teaching Assistant for undergraduate courses.
+            </p>
+
+            <div class="courses-container">
+              <h4 class="courses-title">
+                <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 19.5A2.5 2.5 0 0 1 6.5 17H20"/><path d="M6.5 2H20v20H6.5A2.5 2.5 0 0 1 4 19.5v-15A2.5 2.5 0 0 1 6.5 2z"/></svg>
+                Key Courses &amp; Semesters Taken:
+              </h4>
+              <div class="course-tags-grid">
+                <span class="course-chip">Deep Learning Systems <span class="course-grade">Completed</span></span>
+                <span class="course-chip">Computer Vision &amp; Image Processing <span class="course-grade">Completed</span></span>
+                <span class="course-chip">Foundations of Machine Learning <span class="course-grade">Completed</span></span>
+                <span class="course-chip">Optimization Techniques in AI <span class="course-grade">Completed</span></span>
+                <span class="course-chip">Linear Algebra &amp; Probability for AI <span class="course-grade">Completed</span></span>
+                <span class="course-chip">Multimodal Representation Learning <span class="course-grade">Ongoing</span></span>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Milestone 2: B.Tech in Computer Science & Engineering -->
+        <div class="timeline-item">
+          <div class="timeline-dot"></div>
+          <div class="card timeline-card">
+            <div class="timeline-header">
+              <div class="institution-block">
+                <h3 class="institution-name">Ramkrishna Mahato Government Engineering College</h3>
+                <p class="degree-name">Bachelor of Technology (B.Tech) in Computer Science &amp; Engineering</p>
+                <div class="institution-meta">
+                  <span class="timeline-period">
+                    <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
+                    August 2021 – June 2025 &bull; 4 Years Full-Time
+                  </span>
+                  <span style="font-size: 0.82rem; color: var(--text-muted);">&bull; Purulia, West Bengal, India</span>
+                </div>
+              </div>
+              <div class="grade-badge">
+                <span>Final CGPA: 8.46 / 10.0</span>
+              </div>
+            </div>
+
+            <p class="timeline-content-desc">
+              Comprehensive undergraduate engineering curriculum in computer systems, algorithms, software engineering, and computational intelligence. Graduated with First Class Distinction.
+            </p>
+
+            <div class="courses-container">
+              <h4 class="courses-title">
+                <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 19.5A2.5 2.5 0 0 1 6.5 17H20"/><path d="M6.5 2H20v20H6.5A2.5 2.5 0 0 1 4 19.5v-15A2.5 2.5 0 0 1 6.5 2z"/></svg>
+                Core Coursework &amp; Subjects:
+              </h4>
+              <div class="course-tags-grid">
+                <span class="course-chip">Data Structures &amp; Algorithms <span class="course-grade">Grade: A</span></span>
+                <span class="course-chip">Operating Systems <span class="course-grade">Grade: A</span></span>
+                <span class="course-chip">Database Management Systems <span class="course-grade">Grade: A</span></span>
+                <span class="course-chip">Object-Oriented Programming (C++ / Java)</span>
+                <span class="course-chip">Computer Networks</span>
+                <span class="course-chip">Theory of Computation</span>
+                <span class="course-chip">Artificial Intelligence &amp; Soft Computing</span>
+                <span class="course-chip">Design &amp; Analysis of Algorithms</span>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Milestone 3: Class XII (12th Board Examination) -->
+        <div class="timeline-item">
+          <div class="timeline-dot"></div>
+          <div class="card timeline-card">
+            <div class="timeline-header">
+              <div class="institution-block">
+                <h3 class="institution-name">Uluberia High School</h3>
+                <p class="degree-name">Higher Secondary (Class XII) &bull; WBCHSE &bull; Science Stream</p>
+                <div class="institution-meta">
+                  <span class="timeline-period">
+                    <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
+                    2019 – 2021 &bull; Board Examination
+                  </span>
+                  <span style="font-size: 0.82rem; color: var(--text-muted);">&bull; Uluberia, West Bengal, India</span>
+                </div>
+              </div>
+              <div class="grade-badge">
+                <span>Board Score: 92.0%</span>
+              </div>
+            </div>
+
+            <p class="timeline-content-desc">
+              Focused rigorous study in pure and applied sciences, higher mathematics, physics, and computing with top honors.
+            </p>
+
+            <div class="courses-container">
+              <h4 class="courses-title">
+                <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 19.5A2.5 2.5 0 0 1 6.5 17H20"/><path d="M6.5 2H20v20H6.5A2.5 2.5 0 0 1 4 19.5v-15A2.5 2.5 0 0 1 6.5 2z"/></svg>
+                Subjects Studied &amp; Grades:
+              </h4>
+              <div class="course-tags-grid">
+                <span class="course-chip">Mathematics <span class="course-grade">Distinction</span></span>
+                <span class="course-chip">Physics <span class="course-grade">Distinction</span></span>
+                <span class="course-chip">Chemistry <span class="course-grade">Distinction</span></span>
+                <span class="course-chip">Computer Science</span>
+                <span class="course-chip">English</span>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Milestone 4: Class X (10th Board Examination) -->
+        <div class="timeline-item">
+          <div class="timeline-dot"></div>
+          <div class="card timeline-card">
+            <div class="timeline-header">
+              <div class="institution-block">
+                <h3 class="institution-name">Uluberia High School</h3>
+                <p class="degree-name">Secondary (Class X) &bull; WBBSE (Madhyamik)</p>
+                <div class="institution-meta">
+                  <span class="timeline-period">
+                    <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
+                    Completed 2019 &bull; Board Examination
+                  </span>
+                  <span style="font-size: 0.82rem; color: var(--text-muted);">&bull; Uluberia, West Bengal, India</span>
+                </div>
+              </div>
+              <div class="grade-badge">
+                <span>Board Score: 88.7%</span>
+              </div>
+            </div>
+
+            <p class="timeline-content-desc">
+              Strong foundational academics across mathematics, general sciences, social sciences, and languages with outstanding school performance.
+            </p>
+
+            <div class="courses-container">
+              <h4 class="courses-title">
+                <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 19.5A2.5 2.5 0 0 1 6.5 17H20"/><path d="M6.5 2H20v20H6.5A2.5 2.5 0 0 1 4 19.5v-15A2.5 2.5 0 0 1 6.5 2z"/></svg>
+                Foundational Subjects:
+              </h4>
+              <div class="course-tags-grid">
+                <span class="course-chip">Mathematics</span>
+                <span class="course-chip">Physical Science</span>
+                <span class="course-chip">Life Science</span>
+                <span class="course-chip">History &amp; Geography</span>
+                <span class="course-chip">Bengali</span>
+                <span class="course-chip">English</span>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Milestone 5: Classes V–VIII -->
+        <div class="timeline-item">
+          <div class="timeline-dot"></div>
+          <div class="card timeline-card">
+            <div class="timeline-header">
+              <div class="institution-block">
+                <h3 class="institution-name">Raghudevbati Sadharaner Vidyalaya</h3>
+                <p class="degree-name">Middle School (Classes V – VIII)</p>
+                <div class="institution-meta">
+                  <span class="timeline-period">
+                    <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
+                    2014 – 2017
+                  </span>
+                  <span style="font-size: 0.82rem; color: var(--text-muted);">&bull; West Bengal, India</span>
+                </div>
+              </div>
+            </div>
+
+            <p class="timeline-content-desc">
+              Early schooling that built the foundation in mathematics, science, and languages.
+            </p>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  </div><!-- /.hero-reveal-wrapper -->
+
+  <!-- =================================================================
+       PORTFOLIO SECTIONS HUB (Quick Navigation to Dedicated HTML Pages)
+       ================================================================= -->
+  <section class="wc-bg" id="portfolio-sections">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-tag">Portfolio Directory</span>
+        <h2 class="section-title">Explore My Portfolio</h2>
+        <p class="section-desc">
+          Browse dedicated sections detailing technical expertise, published research, leadership positions, credentials, and extracurricular pursuits.
+        </p>
+      </div>
+
+      <div class="overview-grid">
+
+        <!-- 1. Key Skills -->
+        <div class="card overview-card">
+          <div>
+            <div class="overview-card-header">
+              <div class="overview-card-icon">&#9881;</div>
+              <h3 class="overview-card-title">Key Skills</h3>
+            </div>
+            <p class="overview-card-desc">
+              Proficiencies in Python, C++, PyTorch, TensorFlow 2, LangChain, HuggingFace, Multimodal Learning, PEFT/LoRA fine-tuning, and spoken languages.
+            </p>
+          </div>
+          <a href="skills.html" class="overview-card-link">
+            <span>Explore Key Skills</span> &rarr;
+          </a>
+        </div>
+
+        <!-- 2. Projects -->
+        <div class="card overview-card">
+          <div>
+            <div class="overview-card-header">
+              <div class="overview-card-icon">&#128300;</div>
+              <h3 class="overview-card-title">Projects</h3>
+            </div>
+            <p class="overview-card-desc">
+              8 deep learning &amp; CV research projects: Illumination-Invariant PAR, GeoVQA, Bridge-VQA, HandPD Parkinson's detection, ELVE-Retinex, Brain Tumor Segmentation, and Satellite Water Bodies.
+            </p>
+          </div>
+          <a href="projects.html" class="overview-card-link">
+            <span>Browse Research Projects</span> &rarr;
+          </a>
+        </div>
+
+        <!-- 3. Positions of Responsibility -->
+        <div class="card overview-card">
+          <div>
+            <div class="overview-card-header">
+              <div class="overview-card-icon">&#128101;</div>
+              <h3 class="overview-card-title">Positions of Responsibility</h3>
+            </div>
+            <p class="overview-card-desc">
+              Teaching Assistant for Digital Logic at IIT Bhubaneswar, AstroML Course Instructor for 100+ students at Nakshatra, and Founding Member &amp; Director of Space Science at CARQ.
+            </p>
+          </div>
+          <a href="positions.html" class="overview-card-link">
+            <span>View Leadership Roles</span> &rarr;
+          </a>
+        </div>
+
+        <!-- 4. Certifications -->
+        <div class="card overview-card">
+          <div>
+            <div class="overview-card-header">
+              <div class="overview-card-icon">&#128220;</div>
+              <h3 class="overview-card-title">Certifications</h3>
+            </div>
+            <p class="overview-card-desc">
+              Verified credentials from Stanford University, DeepLearning.AI, AWS, Imperial College London, and University of Sydney in Machine Learning, Generative AI, GANs, and Mathematics for ML.
+            </p>
+          </div>
+          <a href="certifications.html" class="overview-card-link">
+            <span>View Certifications</span> &rarr;
+          </a>
+        </div>
+
+        <!-- 5. Others -->
+        <div class="card overview-card">
+          <div>
+            <div class="overview-card-header">
+              <div class="overview-card-icon">&#10024;</div>
+              <h3 class="overview-card-title">Others &amp; Achievements</h3>
+            </div>
+            <p class="overview-card-desc">
+              Personal interests in astrophysics, digital 3D/2D art, physics simulations, competitive coding, and notable life achievements.
+            </p>
+          </div>
+          <a href="others.html" class="overview-card-link">
+            <span>Discover Interests &amp; Highlights</span> &rarr;
+          </a>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- =================================================================
+       CONTACT / "LET'S TALK" SECTION & ALL PROFESSIONAL LINKS
+       Placed cleanly at the bottom after Academic Journey and directory hub
+       ================================================================= -->
+  <section class="wc-bg contact-section" id="contact">
+    <div class="container">
+      <div class="contact-card">
+        <span class="section-tag">Let's Connect</span>
+        <h2 class="contact-title">Let's Talk &amp; Collaborate</h2>
+        <p class="contact-desc">
+          Interested in discussing computer vision, multimodal intelligence, or prospective research collaborations? 
+          Feel free to reach out directly through any of the channels below.
+        </p>
+
+        <!-- All Professional & Social Links -->
+        <div class="contact-grid">
+          <a href="mailto:25AI06021@iitbbs.ac.in" class="contact-badge" title="Send Email">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
+            <span>25AI06021@iitbbs.ac.in</span>
+          </a>
+
+          <a href="https://linkedin.com/in/sagnik-kayal-905706233/" target="_blank" rel="noopener noreferrer" class="contact-badge" title="LinkedIn Profile">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M19 3a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h14m-.5 15.5v-5.3a3.26 3.26 0 0 0-3.26-3.26c-.85 0-1.84.52-2.28 1.3v-1.11h-2.79v8.37h2.79v-4.93c0-.77.62-1.4 1.39-1.4a1.4 1.4 0 0 1 1.4 1.4v4.93h2.75M6.88 8.56a1.68 1.68 0 0 0 1.68-1.68c0-.93-.75-1.69-1.68-1.69a1.69 1.69 0 0 0-1.69 1.69c0 .93.76 1.68 1.69 1.68m1.39 9.94v-8.37H5.5v8.37h2.77z"/></svg>
+            <span>LinkedIn / Sagnik Kayal</span>
+          </a>
+
+          <a href="https://github.com/sagnik2003" target="_blank" rel="noopener noreferrer" class="contact-badge" title="GitHub Profile">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2C6.477 2 2 6.484 2 12.017c0 4.425 2.865 8.18 6.839 9.504.5.092.682-.217.682-.483 0-.237-.008-.868-.013-1.703-2.782.605-3.369-1.343-3.369-1.343-.454-1.158-1.11-1.466-1.11-1.466-.908-.62.069-.608.069-.608 1.003.07 1.53 1.032 1.53 1.032.892 1.53 2.341 1.088 2.91.832.092-.647.35-1.088.636-1.338-2.22-.253-4.555-1.113-4.555-4.951 0-1.093.39-1.988 1.029-2.688-.103-.253-.446-1.272.098-2.65 0 0 .84-.27 2.75 1.026A9.564 9.564 0 0112 6.844c.85.004 1.705.115 2.504.337 1.909-1.296 2.747-1.027 2.747-1.027.546 1.379.202 2.398.1 2.651.64.7 1.028 1.595 1.028 2.688 0 3.848-2.339 4.695-4.566 4.943.359.309.678.92.678 1.855 0 1.338-.012 2.419-.012 2.747 0 .268.18.58.688.482A10.019 10.019 0 0022 12.017C22 6.484 17.522 2 12 2z"/></svg>
+            <span>GitHub / sagnik2003</span>
+          </a>
+
+          <a href="https://leetcode.com/u/Sagnik_2003/" target="_blank" rel="noopener noreferrer" class="contact-badge" title="LeetCode Profile">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M13.483 0a1.374 1.374 0 0 0-.961.438L7.116 6.226l-3.854 4.126a5.266 5.266 0 0 0-1.209 2.104 5.35 5.35 0 0 0-.125.513 5.527 5.527 0 0 0 .271 4.735 5.374 5.374 0 0 0 2.222 2.063l5.056 2.656a5.454 5.454 0 0 0 2.585.656c1.375 0 2.684-.52 3.69-1.464l4.275-4.004c.54-.505.57-1.347.065-1.887a1.332 1.332 0 0 0-1.887-.065l-4.272 4.002a2.784 2.784 0 0 1-1.877.747 2.776 2.776 0 0 1-1.317-.334l-5.056-2.656a2.74 2.74 0 0 1-1.132-1.053 2.82 2.82 0 0 1-.138-2.413 2.707 2.707 0 0 1 .616-1.074l3.854-4.126 5.405-5.788c.518-.555.485-1.432-.07-1.95A1.378 1.378 0 0 0 13.483 0zm-2.88 8.44a1.334 1.334 0 0 0-.943.393L3.738 14.86a1.335 1.335 0 0 0 1.885 1.887l5.922-6.027a1.335 1.335 0 0 0-.942-2.28z"/></svg>
+            <span>LeetCode / Sagnik_2003</span>
+          </a>
+        </div>
+
+        <p style="font-size: 0.88rem; color: var(--text-muted);">
+          Location: Indian Institute of Technology, Bhubaneswar, Odisha, India
+        </p>
+      </div>
+
+      <div class="site-footer">
+        <p>&copy; Sagnik Kayal. Minimalist &amp; soothing light forest green design.</p>
+        <a href="#top" class="back-to-top">
+          <span>Back to Top</span> &uarr;
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Mobile Navigation Drawer Toggle Script -->
+  <script>
+    // Re-assemble the hero photo from its shuffled tile sheet
+    (() => {
+      const canvas = document.getElementById('heroPhoto');
+      if (!canvas) return;
+      const T = 50, G = 3, COLS = 30, ROWS = 30, SEED = 20031125, S = T + 2 * G;
+      const mulberry32 = (a) => () => {
+        a = (a + 0x6D2B79F5) >>> 0;
+        let t = a;
+        t = Math.imul(t ^ (t >>> 15), t | 1);
+        t ^= t + Math.imul(t ^ (t >>> 7), t | 61);
+        return ((t ^ (t >>> 14)) >>> 0) / 4294967296;
+      };
+      const rnd = mulberry32(SEED);
+      const perm = Array.from({ length: COLS * ROWS }, (_, i) => i);
+      for (let i = perm.length - 1; i > 0; i--) {
+        const j = Math.floor(rnd() * (i + 1));
+        [perm[i], perm[j]] = [perm[j], perm[i]];
+      }
+      const sheet = new Image();
+      sheet.onload = () => {
+        canvas.width = COLS * T;
+        canvas.height = ROWS * T;
+        const ctx = canvas.getContext('2d');
+        perm.forEach((tile, slot) => {
+          const sx = (slot % COLS) * S + G, sy = Math.floor(slot / COLS) * S + G;
+          ctx.drawImage(sheet, sx, sy, T, T, (tile % COLS) * T, Math.floor(tile / COLS) * T, T, T);
+        });
+      };
+      sheet.src = 'images/hero-tiles.webp';
+      canvas.addEventListener('contextmenu', (e) => e.preventDefault());
+    })();
+
+    // Light / dark mode toggle (choice remembered per browser)
+    const themeToggle = document.getElementById('themeToggle');
+    const syncThemeLabel = () => {
+      const dark = document.documentElement.getAttribute('data-theme') === 'dark';
+      if (themeToggle) themeToggle.setAttribute('aria-label', dark ? 'Switch to light mode' : 'Switch to dark mode');
+    };
+    if (themeToggle) {
+      themeToggle.addEventListener('click', () => {
+        const next = document.documentElement.getAttribute('data-theme') === 'dark' ? 'light' : 'dark';
+        document.documentElement.setAttribute('data-theme', next);
+        try { localStorage.setItem('theme', next); } catch (e) {}
+        syncThemeLabel();
+      });
+      syncThemeLabel();
+    }
+
+    document.documentElement.classList.add('js');
+
+    const mobileToggle = document.getElementById('mobileToggle');
+    const navLinks = document.getElementById('navLinks');
+
+    if (mobileToggle && navLinks) {
+      mobileToggle.addEventListener('click', () => {
+        navLinks.classList.toggle('active');
+      });
+    }
+
+    // ---------------------------------------------------------------
+    // Scroll-driven "walk into the light" transition
+    //  - the painted forest slowly pushes in toward the sunlit clearing
+    //  - the photo slides away to the right
+    //  - the intro text peels off line by line
+    //  - light blooms from the clearing and the Academic Journey emerges
+    //  - the timeline line draws itself down as you read
+    // ---------------------------------------------------------------
+    const reduceMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+    // Matches the CSS breakpoint where the hero is pinned (sticky)
+    const heroPinned = window.matchMedia('(min-width: 869px) and (min-height: 620px)');
+
+    const heroArt = document.querySelector('.hero-art');
+    const heroLight = document.querySelector('.hero-light');
+    const heroPhotoWrap = document.querySelector('.hero-bg-wrapper');
+    const heroScroll = document.querySelector('.hero-scroll-indicator');
+    const heroLines = [...document.querySelectorAll('.hero-text-block > *')].filter((el) => el.tagName !== 'BR');
+    const timelineWrap = document.querySelector('.timeline-wrapper');
+    const clamp01 = (v) => Math.min(Math.max(v, 0), 1);
+    const easeInOut = (t) => (t < 0.5 ? 2 * t * t : 1 - Math.pow(-2 * t + 2, 2) / 2);
+
+    const resetHero = () => {
+      [heroArt, heroLight, heroPhotoWrap, heroScroll, ...heroLines].forEach((el) => {
+        if (el) { el.style.transform = ''; el.style.opacity = ''; el.style.filter = ''; }
+      });
+      if (heroArt) heroArt.style.removeProperty('--art-boost');
+    };
+
+    const updateScene = () => {
+      const vh = window.innerHeight;
+
+      // Timeline line draws down to just past the middle of the screen
+      if (timelineWrap) {
+        const r = timelineWrap.getBoundingClientRect();
+        timelineWrap.style.setProperty('--line-progress', clamp01((vh * 0.6 - r.top) / r.height).toFixed(4));
+      }
+
+      if (!heroPinned.matches) { resetHero(); return; }
+
+      const p = clamp01(window.scrollY / (vh * 0.9));
+      const e = easeInOut(p);
+
+      if (heroArt) {
+        heroArt.style.transform = `scale(${(1 + e * 0.38).toFixed(4)})`;
+        heroArt.style.setProperty('--art-boost', (1 + e * 0.22).toFixed(3));
+      }
+      if (heroPhotoWrap) {
+        heroPhotoWrap.style.transform = `translate3d(${(e * 38).toFixed(2)}%, 0, 0)`;
+        heroPhotoWrap.style.opacity = (1 - clamp01(p * 1.5)).toFixed(3);
+      }
+      heroLines.forEach((el, i) => {
+        const t = easeInOut(clamp01((p - i * 0.05) / 0.4));
+        el.style.transform = `translate3d(${(-t * 70).toFixed(1)}px, ${(-t * 26).toFixed(1)}px, 0)`;
+        el.style.opacity = (1 - t).toFixed(3);
+      });
+      if (heroScroll) heroScroll.style.opacity = (1 - clamp01(p * 5)).toFixed(3);
+      if (heroLight) heroLight.style.opacity = (easeInOut(clamp01((p - 0.25) / 0.75)) * 0.95).toFixed(3);
+    };
+
+    if (!reduceMotion) {
+      let ticking = false;
+      const onScroll = () => {
+        if (!ticking) {
+          ticking = true;
+          requestAnimationFrame(() => { updateScene(); ticking = false; });
+        }
+      };
+      window.addEventListener('scroll', onScroll, { passive: true });
+      window.addEventListener('resize', onScroll);
+      updateScene();
+    } else if (timelineWrap) {
+      timelineWrap.style.setProperty('--line-progress', 1);
+    }
+
+    // Timeline tiles rise into place as they enter the viewport
+    const revealItems = document.querySelectorAll('.academic-overlap .section-header, .timeline-item');
+    if ('IntersectionObserver' in window && !reduceMotion) {
+      const observer = new IntersectionObserver((entries) => {
+        entries.forEach((entry) => {
+          if (entry.isIntersecting) {
+            entry.target.classList.add('is-visible');
+            observer.unobserve(entry.target);
+          }
+        });
+      }, { threshold: 0.15, rootMargin: '0px 0px -40px 0px' });
+      revealItems.forEach((el) => {
+        el.classList.add('reveal');
+        observer.observe(el);
+      });
+    }
+  </script>
+
+</body>
+</html>
