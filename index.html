@@ -523,7 +523,10 @@
         });
       };
       sheet.src = 'images/hero-tiles.webp';
-      canvas.addEventListener('contextmenu', (e) => e.preventDefault());
+      // Casual-save protection: no right-click / long-press menu or dragging anywhere on the hero
+      const hero = document.getElementById('hero');
+      ['contextmenu', 'dragstart'].forEach((evt) =>
+        (hero || canvas).addEventListener(evt, (e) => e.preventDefault()));
     })();
 
     // Light / dark mode toggle (choice remembered per browser)

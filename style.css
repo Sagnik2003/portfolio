@@ -2245,3 +2245,12 @@ section {
       #0d170e;
   }
 }
+
+/* Casual-save protection for the hero photo (no selection, drag or iOS save callout) */
+#hero,
+.hero-bg-photo {
+  -webkit-user-select: none;
+  user-select: none;
+  -webkit-touch-callout: none;
+  -webkit-user-drag: none;
+}
